@@ -10,12 +10,6 @@ def flatten_data(data):
     return np.array(flatten)
 
 
-def draw(number):
-        array_2d = number.reshape((28, 28))
-        plt.imshow(array_2d)
-        plt.show()
-
-
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
 
@@ -23,8 +17,6 @@ def draw(number):
 
 X_train_flatten = flatten_data(X_train)
 X_test_flatten = flatten_data(X_test)
-
-draw(X_test_flatten[8])
 
 #Making the data binary 
 X_train_flatten[X_train_flatten != 0] = 1
